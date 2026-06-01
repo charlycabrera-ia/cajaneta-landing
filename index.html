@@ -31,7 +31,6 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
-    /* Fondo */
     .bg-wrap { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
     .orb { position: absolute; border-radius: 50%; filter: blur(130px); animation: drift 12s ease-in-out infinite alternate; }
     .orb1 { width:800px;height:800px;background:#009EE3;opacity:.05;top:-300px;left:-200px; }
@@ -40,11 +39,9 @@
     @keyframes drift { from{transform:translate(0,0);} to{transform:translate(25px,18px);} }
     .grid-bg { position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(0,158,227,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,158,227,.025) 1px,transparent 1px);background-size:52px 52px; }
 
-    /* Layout */
     .container { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; }
     section { position: relative; z-index: 1; }
 
-    /* Nav */
     nav {
       position: sticky; top: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -69,7 +66,6 @@
     }
     .btn-nav:hover { background: #00B4FF; transform: translateY(-1px); }
 
-    /* Hero */
     .hero {
       text-align: center;
       padding: 1.5rem 2rem 4rem;
@@ -113,10 +109,7 @@
       line-height: 1.6; margin-bottom: 2.5rem;
       animation: fade-up .7s .2s ease both;
     }
-    .hero-cta {
-      animation: fade-up .7s .3s ease both;
-      margin-bottom: .8rem;
-    }
+    .hero-cta { animation: fade-up .7s .3s ease both; margin-bottom: .8rem; }
     .btn-primary {
       background: var(--blue); border: none; border-radius: 14px;
       color: #fff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700;
@@ -132,10 +125,8 @@
     @keyframes shimmer { 0%{left:-100%;} 55%,100%{left:160%;} }
     .btn-primary:hover { background:#00B4FF;transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,158,227,.5); }
     .hero-note { font-size:12px;color:#2A4A6A;animation:fade-up .7s .4s ease both; }
-
     @keyframes fade-up { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
 
-    /* Demo card */
     .demo-wrap { max-width: 780px; margin: 0 auto 7rem; padding: 0 2rem; animation: fade-up .8s .5s ease both; }
     .demo-card {
       background: rgba(13,21,38,.85); border:1px solid rgba(0,158,227,.15);
@@ -161,7 +152,6 @@
     .mov-desc { font-size:12px;color:#7ABEDE;flex:1; }
     .mov-amt { font-size:12px;font-weight:700; }
 
-    /* Features */
     .section { padding: 5rem 0; }
     .section-inner { text-align:center;margin-bottom:3rem; }
     .section-tag { font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);margin-bottom:10px; }
@@ -175,7 +165,6 @@
     .feature-title { font-size:15px;font-weight:700;color:#D0E8FF;margin-bottom:6px; }
     .feature-desc { font-size:13px;color:var(--dim);line-height:1.65; }
 
-    /* Para quién */
     .chips {
       display: grid;
       grid-template-columns: repeat(4, auto);
@@ -192,7 +181,70 @@
     }
     .chip:hover { border-color:rgba(0,158,227,.35);color:#C8DEFF;transform:translateY(-1px); }
 
-    /* CTA final */
+    /* ── Próximamente ── */
+    .soon-section { padding: 5rem 0; }
+    .soon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 3rem;
+    }
+    .soon-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 1.6rem;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .soon-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0,158,227,.3), transparent);
+    }
+    .soon-badge {
+      display: inline-block;
+      font-size: 9px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.25);
+      background: rgba(255,255,255,.05);
+      border-radius: 4px; padding: 3px 8px;
+      margin-bottom: 14px;
+    }
+    .soon-icon {
+      width: 42px; height: 42px; border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 19px; margin-bottom: 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .soon-title {
+      font-size: 15px; font-weight: 700;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 6px;
+    }
+    .soon-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,.25);
+      line-height: 1.65;
+    }
+    .soon-items {
+      margin-top: 10px;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .soon-item {
+      font-size: 12px;
+      color: rgba(255,255,255,.2);
+      padding-left: 12px;
+      position: relative;
+    }
+    .soon-item::before {
+      content: '·';
+      position: absolute; left: 0;
+      color: rgba(0,158,227,.4);
+    }
+
     .cta-section { padding:5rem 2rem 7rem;text-align:center;position:relative;z-index:1; }
     .cta-box {
       max-width: 700px; margin: 0 auto;
@@ -204,14 +256,13 @@
     .cta-box h2 { font-family:'Inter',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:.8rem;line-height:1.1;letter-spacing:-.02em; }
     .cta-box p { font-size:15px;color:var(--muted);margin-bottom:2rem;line-height:1.6; }
 
-    /* Footer */
     footer { position:relative;z-index:1;text-align:center;padding:1.5rem 2rem;border-top:1px solid rgba(0,158,227,.06);font-size:12px;color:#1E3A55; }
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav { padding: .9rem 1.2rem; }
       .hero { padding: 5rem 1.2rem 3.5rem; }
       .features-grid { grid-template-columns: 1fr; }
+      .soon-grid { grid-template-columns: 1fr; }
       .chips { grid-template-columns: repeat(2, auto); }
       .demo-wrap { margin-bottom: 5rem; }
     }
@@ -334,6 +385,92 @@
         <div class="chip">🎨 Diseñadores</div>
         <div class="chip">🔧 Ingenieros</div>
         <div class="chip">📚 Psicólogos</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Próximamente -->
+  <section class="soon-section">
+    <div class="container">
+      <div class="section-inner">
+        <div class="section-tag">Próximamente</div>
+        <h2 class="section-title">Una herramienta financiera completa</h2>
+        <p class="section-sub">Estamos construyendo el resto. Usá la app hoy y ayudanos a priorizar qué llega primero.</p>
+      </div>
+      <div class="soon-grid">
+
+        <div class="soon-card">
+          <span class="soon-badge">En desarrollo</span>
+          <div class="soon-icon">🏠</div>
+          <div class="soon-title">Costos fijos</div>
+          <div class="soon-desc">Cargá tus gastos recurrentes una sola vez y se descuentan automáticamente cada mes.</div>
+          <div class="soon-items">
+            <div class="soon-item">Alquiler de oficina</div>
+            <div class="soon-item">Seguros y servicios</div>
+            <div class="soon-item">Suscripciones y abonos</div>
+          </div>
+        </div>
+
+        <div class="soon-card">
+          <span class="soon-badge">En desarrollo</span>
+          <div class="soon-icon">👥</div>
+          <div class="soon-title">Gestión de empleados</div>
+          <div class="soon-desc">Registrá sueldos con un toque. Lista de empleados con monto mensual listo para ejecutar.</div>
+          <div class="soon-items">
+            <div class="soon-item">Lista de colaboradores</div>
+            <div class="soon-item">Egreso rápido de sueldo</div>
+            <div class="soon-item">Historial de pagos</div>
+          </div>
+        </div>
+
+        <div class="soon-card">
+          <span class="soon-badge">En desarrollo</span>
+          <div class="soon-icon">📈</div>
+          <div class="soon-title">Simulador de inversiones</div>
+          <div class="soon-desc">Evaluá si conviene comprar un vehículo, una propiedad o una máquina antes de decidir.</div>
+          <div class="soon-items">
+            <div class="soon-item">TIR y VAN automáticos</div>
+            <div class="soon-item">Flujo de fondos proyectado</div>
+            <div class="soon-item">Período de repago</div>
+          </div>
+        </div>
+
+        <div class="soon-card">
+          <span class="soon-badge">Planificado</span>
+          <div class="soon-icon">📊</div>
+          <div class="soon-title">Evolución financiera</div>
+          <div class="soon-desc">Gráfico de los últimos 6 meses para ver la tendencia real de tu negocio de un vistazo.</div>
+          <div class="soon-items">
+            <div class="soon-item">Ingresos vs egresos</div>
+            <div class="soon-item">Neto mes a mes</div>
+            <div class="soon-item">Tendencia de crecimiento</div>
+          </div>
+        </div>
+
+        <div class="soon-card">
+          <span class="soon-badge">Planificado</span>
+          <div class="soon-icon">📄</div>
+          <div class="soon-title">Reporte para el contador</div>
+          <div class="soon-desc">Estado financiero mensual en PDF listo para enviarle a tu contador sin armar nada.</div>
+          <div class="soon-items">
+            <div class="soon-item">Detalle por categoría</div>
+            <div class="soon-item">Resumen de impuestos</div>
+            <div class="soon-item">Exportación con un clic</div>
+          </div>
+        </div>
+
+        <div class="soon-card">
+          <span class="soon-badge">Planificado</span>
+          <div class="soon-icon">🔔</div>
+          <div class="soon-title">Alertas de vencimientos</div>
+          <div class="soon-desc">Recordatorios automáticos antes de que venzan impuestos, sueldos y obligaciones fijas.</div>
+          <div class="soon-items">
+            <div class="soon-item">Vencimientos impositivos</div>
+            <div class="soon-item">Sueldos a pagar</div>
+            <div class="soon-item">Alquileres próximos</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
