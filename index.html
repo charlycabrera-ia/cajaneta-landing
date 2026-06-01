@@ -71,16 +71,6 @@
       padding: 1.5rem 2rem 4rem;
       max-width: 1000px; margin: 0 auto;
     }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(0,158,227,.08); border: 1px solid rgba(0,158,227,.2);
-      border-radius: 20px; padding: 5px 16px; margin-bottom: 2.5rem;
-      font-size: 12px; font-weight: 500; color: #7ABEDE;
-      animation: fade-up .6s ease both;
-    }
-    .badge-dot { width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.5;transform:scale(.8);} }
-
     .hero-logo-wrap {
       display: flex; justify-content: center; margin-bottom: 2rem;
       animation: fade-up .6s .05s ease both;
@@ -220,31 +210,14 @@
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.06);
     }
-    .soon-title {
-      font-size: 15px; font-weight: 700;
-      color: rgba(255,255,255,.7);
-      margin-bottom: 6px;
-    }
-    .soon-desc {
-      font-size: 13px;
-      color: rgba(255,255,255,.25);
-      line-height: 1.65;
-    }
-    .soon-items {
-      margin-top: 10px;
-      display: flex; flex-direction: column; gap: 5px;
-    }
+    .soon-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,.7); margin-bottom: 6px; }
+    .soon-desc { font-size: 13px; color: rgba(255,255,255,.25); line-height: 1.65; }
+    .soon-items { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
     .soon-item {
-      font-size: 12px;
-      color: rgba(255,255,255,.2);
-      padding-left: 12px;
-      position: relative;
+      font-size: 12px; color: rgba(255,255,255,.2);
+      padding-left: 12px; position: relative;
     }
-    .soon-item::before {
-      content: '·';
-      position: absolute; left: 0;
-      color: rgba(0,158,227,.4);
-    }
+    .soon-item::before { content: '·'; position: absolute; left: 0; color: rgba(0,158,227,.4); }
 
     .cta-section { padding:5rem 2rem 7rem;text-align:center;position:relative;z-index:1; }
     .cta-box {
@@ -257,7 +230,13 @@
     .cta-box h2 { font-family:'Inter',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:.8rem;line-height:1.1;letter-spacing:-.02em; }
     .cta-box p { font-size:15px;color:var(--muted);margin-bottom:2rem;line-height:1.6; }
 
-    footer { position:relative;z-index:1;text-align:center;padding:1.5rem 2rem;border-top:1px solid rgba(0,158,227,.06);font-size:12px;color:#1E3A55; }
+    footer {
+      position: relative; z-index: 1; text-align: center;
+      padding: 1.5rem 2rem 2rem;
+      border-top: 1px solid rgba(0,158,227,.06);
+      font-size: 12px; color: #1E3A55;
+      line-height: 1.8;
+    }
 
     @media (max-width: 768px) {
       nav { padding: .9rem 1.2rem; }
@@ -265,7 +244,12 @@
       .features-grid { grid-template-columns: 1fr; }
       .soon-grid { grid-template-columns: 1fr; }
       .chips { grid-template-columns: repeat(2, auto); }
-      .demo-wrap { margin-bottom: 5rem; }
+      .demo-wrap { margin-bottom: 5rem; padding: 0 1rem; }
+      .metrics-row { gap: 6px; }
+      .metric-box { padding: 10px 8px; }
+      .metric-box .val { font-size: 14px; }
+      .mov-desc { font-size: 11px; }
+      .mov-amt { font-size: 11px; }
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 36px; }
@@ -486,7 +470,8 @@
   </section>
 
   <footer>
-    © 2026 Cajaneta · Control financiero para profesionales independientes en Argentina
+    <div>© 2026 Cajaneta</div>
+    <div>Control financiero para profesionales independientes</div>
   </footer>
 
 </body>
