@@ -181,7 +181,6 @@
     }
     .chip:hover { border-color:rgba(0,158,227,.35);color:#C8DEFF;transform:translateY(-1px); }
 
-    /* ── Próximamente ── */
     .soon-section { padding: 5rem 0; }
     .soon-grid {
       display: grid;
@@ -197,7 +196,9 @@
       text-align: left;
       position: relative;
       overflow: hidden;
+      transition: all .22s;
     }
+    .soon-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.3); }
     .soon-card::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0; height: 2px;
@@ -389,21 +390,21 @@
     </div>
   </section>
 
-  <!-- Próximamente -->
+  <!-- Herramientas -->
   <section class="soon-section">
     <div class="container">
       <div class="section-inner">
-        <div class="section-tag">Próximamente</div>
-        <h2 class="section-title">Una herramienta financiera completa</h2>
-        <p class="section-sub">Estamos construyendo el resto. Usá la app hoy y ayudanos a priorizar qué llega primero.</p>
+        <div class="section-tag">Herramientas incluidas</div>
+        <h2 class="section-title">Todo lo que necesitás, hoy</h2>
+        <p class="section-sub">Sin planes de pago, sin funciones bloqueadas. Todo disponible desde el primer día.</p>
       </div>
       <div class="soon-grid">
 
-        <div class="soon-card">
-          <span class="soon-badge">En desarrollo</span>
+        <div class="soon-card" style="border-color:rgba(0,158,227,.15)">
+          <span class="soon-badge" style="background:rgba(16,185,129,.1);color:#10B981;">Disponible</span>
           <div class="soon-icon">🏠</div>
-          <div class="soon-title">Costos fijos</div>
-          <div class="soon-desc">Cargá tus gastos recurrentes una sola vez y se descuentan automáticamente cada mes.</div>
+          <div class="soon-title" style="color:#D0E8FF">Costos fijos</div>
+          <div class="soon-desc" style="color:rgba(255,255,255,.4)">Cargá tus gastos recurrentes una sola vez. Alquiler, seguros, suscripciones y más.</div>
           <div class="soon-items">
             <div class="soon-item">Alquiler de oficina</div>
             <div class="soon-item">Seguros y servicios</div>
@@ -411,23 +412,23 @@
           </div>
         </div>
 
-        <div class="soon-card">
-          <span class="soon-badge">En desarrollo</span>
+        <div class="soon-card" style="border-color:rgba(0,158,227,.15)">
+          <span class="soon-badge" style="background:rgba(16,185,129,.1);color:#10B981;">Disponible</span>
           <div class="soon-icon">👥</div>
-          <div class="soon-title">Gestión de empleados</div>
-          <div class="soon-desc">Registrá sueldos con un toque. Lista de empleados con monto mensual listo para ejecutar.</div>
+          <div class="soon-title" style="color:#D0E8FF">Colaboradores</div>
+          <div class="soon-desc" style="color:rgba(255,255,255,.4)">Registrá sueldos con un toque. Lista de colaboradores con egreso rápido de pago.</div>
           <div class="soon-items">
-            <div class="soon-item">Lista de colaboradores</div>
+            <div class="soon-item">Empleados y freelancers</div>
             <div class="soon-item">Egreso rápido de sueldo</div>
             <div class="soon-item">Historial de pagos</div>
           </div>
         </div>
 
-        <div class="soon-card">
-          <span class="soon-badge">En desarrollo</span>
+        <div class="soon-card" style="border-color:rgba(0,158,227,.15)">
+          <span class="soon-badge" style="background:rgba(16,185,129,.1);color:#10B981;">Disponible</span>
           <div class="soon-icon">📈</div>
-          <div class="soon-title">Simulador de inversiones</div>
-          <div class="soon-desc">Evaluá si conviene comprar un vehículo, una propiedad o una máquina antes de decidir.</div>
+          <div class="soon-title" style="color:#D0E8FF">Simulador de inversiones</div>
+          <div class="soon-desc" style="color:rgba(255,255,255,.4)">Evaluá si conviene comprar un vehículo, propiedad o maquinaria antes de decidir.</div>
           <div class="soon-items">
             <div class="soon-item">TIR y VAN automáticos</div>
             <div class="soon-item">Flujo de fondos proyectado</div>
@@ -435,23 +436,23 @@
           </div>
         </div>
 
-        <div class="soon-card">
-          <span class="soon-badge">Planificado</span>
+        <div class="soon-card" style="border-color:rgba(0,158,227,.15)">
+          <span class="soon-badge" style="background:rgba(16,185,129,.1);color:#10B981;">Disponible</span>
           <div class="soon-icon">📊</div>
-          <div class="soon-title">Evolución financiera</div>
-          <div class="soon-desc">Gráfico de los últimos 6 meses para ver la tendencia real de tu negocio de un vistazo.</div>
+          <div class="soon-title" style="color:#D0E8FF">Evolución financiera</div>
+          <div class="soon-desc" style="color:rgba(255,255,255,.4)">Gráfico de los últimos 6 meses para ver la tendencia real de tu negocio de un vistazo.</div>
           <div class="soon-items">
             <div class="soon-item">Ingresos vs egresos</div>
             <div class="soon-item">Neto mes a mes</div>
-            <div class="soon-item">Tendencia de crecimiento</div>
+            <div class="soon-item">Promedios del período</div>
           </div>
         </div>
 
-        <div class="soon-card">
-          <span class="soon-badge">Planificado</span>
+        <div class="soon-card" style="border-color:rgba(0,158,227,.15)">
+          <span class="soon-badge" style="background:rgba(16,185,129,.1);color:#10B981;">Disponible</span>
           <div class="soon-icon">📄</div>
-          <div class="soon-title">Reporte para el contador</div>
-          <div class="soon-desc">Estado financiero mensual en PDF listo para enviarle a tu contador sin armar nada.</div>
+          <div class="soon-title" style="color:#D0E8FF">Reporte para el contador</div>
+          <div class="soon-desc" style="color:rgba(255,255,255,.4)">Estado financiero mensual en PDF listo para enviarle a tu contador sin armar nada.</div>
           <div class="soon-items">
             <div class="soon-item">Detalle por categoría</div>
             <div class="soon-item">Resumen de impuestos</div>
@@ -460,7 +461,7 @@
         </div>
 
         <div class="soon-card">
-          <span class="soon-badge">Planificado</span>
+          <span class="soon-badge">Próximamente</span>
           <div class="soon-icon">🔔</div>
           <div class="soon-title">Alertas de vencimientos</div>
           <div class="soon-desc">Recordatorios automáticos antes de que venzan impuestos, sueldos y obligaciones fijas.</div>
